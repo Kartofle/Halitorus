@@ -8,10 +8,7 @@ class Layout extends Component {
         return (
             <div className={styles.Layout}>
                 <h1>Logo : Nav : Hamberger</h1>
-                <div>User Profile</div>
-                <div>Find Game</div>
-                <div>Create Game</div>
-                <div>In Game</div>
+                {this.props.children}
             </div>
         );
     }

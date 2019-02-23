@@ -11,3 +11,5 @@ class InGame extends Component {
         );
     }
 }
+
+export default InGame;
