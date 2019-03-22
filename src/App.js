@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import { Route } from  'react-router-dom';
+import { Route, Switch } from  'react-router-dom';
 
 import Layout from './hoc/Layout/Layout';
-import CreateGame from './containers/CreateGame/CreateGame';
-import FindGame from './containers/FindGame/FindGame';
-import InGame from './containers/InGame/InGame';
+import Auth from './containers/Auth/Auth';
 import UserProfile from './containers/UserProfile/UserProfile';
 
 class App extends Component {
@@ -12,10 +10,10 @@ class App extends Component {
     return (
       <div>
         <Layout>
-          <Route path="/user_profile" component={UserProfile} />
-          <Route path="/find_game" component={FindGame} />
-          <Route path="/create_game" component={CreateGame} />
-          <Route path="/in_game" component={InGame} />
+          <Switch>  
+            <Route path="/user_profile" component={UserProfile} />
+            <Route path="/" exact component={Auth} />
+          </Switch>
         </Layout>
       </div>
     );
