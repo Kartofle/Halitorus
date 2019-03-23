@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
 import GamePanel from '../../components/GamePanel/GamePanel';
-
+import ToolPanel from '../../components/ToolPanel/ToolPanel';
 
 const styles = theme => ({
     root: {
@@ -25,7 +24,6 @@ const styles = theme => ({
 class UserProfile extends Component {
     render () {  
         const { classes } = this.props;
-
         return (
             <div className={classes.root}>
             <Grid container alignItems="stretch" spacing={0} className={classes.display}>
@@ -33,7 +31,7 @@ class UserProfile extends Component {
                 <GamePanel />
               </Grid>
               <Grid item xs={9}>
-                <Paper className={classes.paper}>Tabs</Paper>
+                <ToolPanel />
               </Grid>
             </Grid>
           </div>

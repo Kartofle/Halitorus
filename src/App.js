@@ -8,14 +8,12 @@ import UserProfile from './containers/UserProfile/UserProfile';
 class App extends Component {
   render() {
     return (
-      <div>
-        <Layout>
-          <Switch>  
-            <Route path="/user_profile" component={UserProfile} />
-            <Route path="/" exact component={Auth} />
-          </Switch>
-        </Layout>
-      </div>
+      <Layout>
+        <Switch>  
+          <Route path="/user_profile" component={UserProfile} />
+          <Route path="/" exact component={Auth} />
+        </Switch>
+      </Layout>
     );
   }
 }
