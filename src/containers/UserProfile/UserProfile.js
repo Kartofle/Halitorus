@@ -11,7 +11,7 @@ const styles = theme => ({
       flexGrow: 1,
     },
     display: {
-      height: '500px',
+      height: '500px', 
     },
     paper: {
       height: '100%',
@@ -26,15 +26,15 @@ class UserProfile extends Component {
         const { classes } = this.props;
         return (
             <div className={classes.root}>
-            <Grid container alignItems="stretch" spacing={0} className={classes.display}>
-              <Grid item xs={3}>
-                <GamePanel />
+              <Grid container alignItems="stretch" spacing={0} className={classes.display}>
+                <Grid item xs={2}>
+                  <GamePanel />
+                </Grid>
+                <Grid item xs={10}>
+                  <ToolPanel />
+                </Grid>
               </Grid>
-              <Grid item xs={9}>
-                <ToolPanel />
-              </Grid>
-            </Grid>
-          </div>
+            </div>
         );
     }
 }

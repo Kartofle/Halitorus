@@ -33,7 +33,7 @@ const gamePanel = (props) => {
     const { classes } = props;
     return (
         <Paper className={classes.paper}>
-            <div className={classes.title} >Current Campaigns</div>
+            <div className={classes.title}>Current Campaigns</div>
             <Divider />
             <List className={classes.root}>
                 <Game />
