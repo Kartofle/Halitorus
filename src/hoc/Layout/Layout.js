@@ -8,7 +8,7 @@ class Layout extends Component {
         return (
             <div className={styles.Layout}>
                 <MenuAppBar />
-                <main>
+                <main className={styles.Content}>
                     {this.props.children}
                 </main>
             </div>

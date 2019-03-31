@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
+import CharacterList from './CharacterList/CharacterList';
+import CharacterSheet from './CharacterSheet/CharacterSheet';
+
 const styles = theme => ({
     root: {
       flexGrow: 1, 
-      justifyContent: 'stretch',
     },
     sheet: {
       padding: theme.spacing.unit * 2,
@@ -19,20 +21,22 @@ const styles = theme => ({
     },
 });
 
-const characterTab = (props) => {
-    const { classes } = props;
+class characterTab extends Component {
+  render () {
+    const { classes } = this.props;
     return (
-
-          <Grid container alignItems="stretch" spacing={0} className={classes.root}>
+        <Paper>
+          <Grid container spacing={0} className={classes.root}>
             <Grid item xs={2}>
-              <Paper className={classes.list}>List</Paper>
+              <CharacterList />
             </Grid>
             <Grid item xs={10}>
-              <Paper className={classes.sheet}>Sheet</Paper>
+              <CharacterSheet />
             </Grid>
           </Grid>
-
+        </Paper>
     );
+  }
 }
 
 export default withStyles(styles)(characterTab);

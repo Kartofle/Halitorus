@@ -4,5 +4,5 @@
 }
 
 .Content {
-    margin-top: 72px;
+    height: '-webkit-fill-available',
 }

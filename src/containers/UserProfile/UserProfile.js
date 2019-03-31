@@ -11,7 +11,7 @@ const styles = theme => ({
       flexGrow: 1,
     },
     display: {
-      height: '500px', 
+      height: '-webkit-fill-available',
     },
     paper: {
       height: '100%',

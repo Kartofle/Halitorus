@@ -10,7 +10,7 @@ import Game from './Game/Game';
 
 const styles = theme => ({
     root: {
-        height: '500px',
+        height: '-webkit-fill-available',
         width: '100%',
         maxWidth: 360,
         backgroundColor: theme.palette.background.paper,
