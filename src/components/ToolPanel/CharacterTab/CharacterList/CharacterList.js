@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
-import ListSubheader from '@material-ui/core/ListSubheader';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -58,7 +57,7 @@ class CharacterList extends React.Component {
     return (
         <Paper>
             <List
-                component="Nav"
+                component="nav"
                 className={classes.root}
             >
                 <ListItem button onClick={this.handlePCsClick}>

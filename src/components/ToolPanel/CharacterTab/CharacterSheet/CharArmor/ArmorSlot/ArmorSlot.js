@@ -31,33 +31,31 @@ const styles = theme => ({
 const armorSlot = (props) => {
     const { classes } = props
     return (
-        <form>
-            <div className={classes.rowBlock}>
-                <TextField
-                    id="armor"
-                    placeholder="Armor"
-                    className={classes.textField}
-                    margin="dense"
-                    startAdornment={
-                        <InputAdornment position="start">
-                            {/* {props.icon} */}
-                        </InputAdornment>
-                    }
-                />
-                <TextField
-                    id="hardness"
-                    placeholder="HR"
-                    className={classes.thinTextField}
-                    margin="dense"
-                /> 
-                <TextField
-                    id="durability"
-                    placeholder="Durability"
-                    className={classes.medTextField}
-                    margin="dense"
-                />
-            </div>
-        </form>
+        <div className={classes.rowBlock}>
+            <TextField
+                id="armor"
+                placeholder="Armor"
+                className={classes.textField}
+                margin="dense"
+                startadornment={
+                    <InputAdornment position="start">
+                        {/* {props.icon} */}
+                    </InputAdornment>
+                }
+            />
+            <TextField
+                id="hardness"
+                placeholder="HR"
+                className={classes.thinTextField}
+                margin="dense"
+            /> 
+            <TextField
+                id="durability"
+                placeholder="         /"
+                className={classes.medTextField}
+                margin="dense"
+            />
+        </div>
     );
 }
 

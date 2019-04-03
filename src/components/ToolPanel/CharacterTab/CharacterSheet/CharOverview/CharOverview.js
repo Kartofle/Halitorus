@@ -86,7 +86,7 @@ const charOverview = (props) => {
                 label="Competence Rating"
                 multiline
                 rows="2"
-                defaultValue=" "
+                defaultValue="   B   |   M   |   S"
                 className={classes.textField}
                 margin="dense"
                 variant="outlined"

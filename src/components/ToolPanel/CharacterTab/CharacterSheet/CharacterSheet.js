@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 
@@ -6,6 +6,7 @@ import CharOverview from './CharOverview/CharOverview';
 import CharStats from './CharStats/CharStats';
 import CharQuickSlots from './CharQuickSlots/CharQuickSlots';
 import CharArmor from './CharArmor/CharArmor';
+import CharWounds from './CharWounds/CharWounds';
 
 const styles = theme => ({
     paper: {
@@ -31,6 +32,7 @@ const characterSheet = (props) => {
                 <CharQuickSlots />
                 <CharArmor />
             </div>
+            <CharWounds />
         </Paper>
     );
 }
