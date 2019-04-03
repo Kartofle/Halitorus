@@ -4,7 +4,7 @@ import TextField from '@material-ui/core/TextField';
 
 const styles = theme => ({
     container: {
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         display: 'flex',
     },
     textField: {

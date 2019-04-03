@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 
 import CharOverview from './CharOverview/CharOverview';
 import CharStats from './CharStats/CharStats';
 import CharQuickSlots from './CharQuickSlots/CharQuickSlots';
+import CharArmor from './CharArmor/CharArmor';
 
 const styles = theme => ({
     paper: {
@@ -13,16 +14,23 @@ const styles = theme => ({
         textAlign: 'center',
         color: theme.palette.text.secondary,
     },
+    container: {
+        justifyContent: 'space-evenly',
+        display: 'flex',
+    },
 });
 
 const characterSheet = (props) => {
     const { classes } = props;
     return (
         <Paper className={classes.paper}>
-            <strong><h2>CharacterSheet</h2></strong>
+            <strong><h2>Lore Character Sheet</h2></strong>
             <CharOverview />
             <CharStats />
-            <CharQuickSlots />
+            <div className={classes.container}>
+                <CharQuickSlots />
+                <CharArmor />
+            </div>
         </Paper>
     );
 }

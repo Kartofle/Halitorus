@@ -1,63 +1,64 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
+import InputAdornment from '@material-ui/core/InputAdornment';
 
 const styles = theme => ({
     container: {
+        justifyContent: 'center',
         display: 'flex',
     },
     textField: {
         marginLeft: theme.spacing.unit * .5,
+        marginRight: theme.spacing.unit  * .5,
+        width: 150,
+    },
+    medTextField: {
+        marginLeft: theme.spacing.unit * .5,
         marginRight: theme.spacing.unit * .5,
-        width: 140,
+        width: 80,
     },
     thinTextField: {
         marginLeft: theme.spacing.unit * .5,
         marginRight: theme.spacing.unit * .5,
         width: 40,
     },
-    thickTextField: {
-        marginLeft: theme.spacing.unit * .5,
-        marginRight: theme.spacing.unit * .5,
-        width: 250,
-    },
     rowBlock: {
         display: 'flex',
     },
 });
 
-const quickSlot = (props) => {
+const armorSlot = (props) => {
     const { classes } = props
     return (
-        <form className={classes.container} noValidate autoComplete="off">
+        <form>
             <div className={classes.rowBlock}>
                 <TextField
-                    id="item-name"
-                    placeholder="Item"
+                    id="armor"
+                    placeholder="Armor"
                     className={classes.textField}
                     margin="dense"
-                /> 
-                <TextField
-                    id="combat-skill"
-                    placeholder="CS"
-                    className={classes.thinTextField}
-                    margin="dense"
-                /> 
-                <TextField
-                    id="armor-pen"
-                    placeholder="AP"
-                    className={classes.thinTextField}
-                    margin="dense"
+                    startAdornment={
+                        <InputAdornment position="start">
+                            {/* {props.icon} */}
+                        </InputAdornment>
+                    }
                 />
                 <TextField
-                    id="damage"
-                    placeholder="Damage"
-                    className={classes.thickTextField}
+                    id="hardness"
+                    placeholder="HR"
+                    className={classes.thinTextField}
                     margin="dense"
                 /> 
+                <TextField
+                    id="durability"
+                    placeholder="Durability"
+                    className={classes.medTextField}
+                    margin="dense"
+                />
             </div>
         </form>
     );
 }
 
-export default withStyles(styles)(quickSlot);
+export default withStyles(styles)(armorSlot);
