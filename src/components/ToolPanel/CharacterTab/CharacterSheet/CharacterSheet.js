@@ -2,6 +2,10 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 
+import CharOverview from './CharOverview/CharOverview';
+import CharStats from './CharStats/CharStats';
+import CharQuickSlots from './CharQuickSlots/CharQuickSlots';
+
 const styles = theme => ({
     paper: {
         height: '-webkit-fill-available',
@@ -15,7 +19,10 @@ const characterSheet = (props) => {
     const { classes } = props;
     return (
         <Paper className={classes.paper}>
-            CharacterSheet
+            <strong><h2>CharacterSheet</h2></strong>
+            <CharOverview />
+            <CharStats />
+            <CharQuickSlots />
         </Paper>
     );
 }
