@@ -13,8 +13,7 @@ import StarBorder from '@material-ui/icons/StarBorder';
 import PeopleIcon from '@material-ui/icons/People';
 import PersonIcon from '@material-ui/icons/Person';
 import Avatar from '@material-ui/core/Avatar';
-import Fab from '@material-ui/core/Fab';
-import AddIcon from '@material-ui/icons/Add';
+import Button from '@material-ui/core/Button';
 
 const styles = theme => ({
     root: {
@@ -32,7 +31,7 @@ const styles = theme => ({
     nested: {
         paddingLeft: theme.spacing.unit * 2,
     },
-    fab: {
+    margin: {
         margin: theme.spacing.unit,
     },
 });
@@ -70,9 +69,9 @@ class CharacterList extends React.Component {
 
                 <Collapse in={this.state.openPCs} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
-                    <Fab size="small" color="primary" aria-label="Create" className={classes.fab}>
-                        <AddIcon />
-                    </Fab>
+                    <Button variant="outlined" size="small" color="primary" className={classes.margin}>
+                        New PC
+                    </Button>
                     <ListItem button className={classes.nested}>
                     <ListItemIcon>
                         <Avatar alt="PC" src=""/>
@@ -92,9 +91,9 @@ class CharacterList extends React.Component {
 
                 <Collapse in={this.state.openNPCs} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
-                    <Fab size="small" color="primary" aria-label="Create" className={classes.fab}>
-                        <AddIcon />
-                    </Fab>
+                    <Button variant="outlined" size="small" color="primary" className={classes.margin}>
+                        New NPC
+                    </Button>
                     <ListItem button className={classes.nested}>
                     <ListItemIcon>
                         <StarBorder />

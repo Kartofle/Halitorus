@@ -15,7 +15,7 @@ const styles = theme => ({
         textAlign: 'center',
         color: theme.palette.text.secondary,
     },
-    container: {
+    QScontainer: {
         justifyContent: 'space-evenly',
         display: 'flex',
     },
@@ -28,7 +28,7 @@ const characterSheet = (props) => {
             <strong><h2>Lore Character Sheet</h2></strong>
             <CharOverview />
             <CharStats />
-            <div className={classes.container}>
+            <div className={classes.QScontainer}>
                 <CharQuickSlots />
                 <CharArmor />
             </div>

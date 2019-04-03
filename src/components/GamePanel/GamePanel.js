@@ -2,8 +2,7 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import Paper from '@material-ui/core/Paper';
-import Fab from '@material-ui/core/Fab';
-import AddIcon from '@material-ui/icons/Add';
+import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 
 import Game from './Game/Game';
@@ -21,7 +20,7 @@ const styles = theme => ({
         textAlign: 'center',
         color: theme.palette.text.secondary,
     },
-    fab: {
+    margin: {
         margin: theme.spacing.unit,
     },
     title: {
@@ -39,9 +38,9 @@ const gamePanel = (props) => {
                 <Game />
                 <Game />
                 <Game />
-                <Fab size="small" color="primary" aria-label="Add" className={classes.fab}>
-                    <AddIcon />
-                </Fab>
+                <Button variant="outlined" size="small" color="primary" className={classes.margin}>
+                    New Game
+                </Button>
             </List>
         </Paper>
     );
