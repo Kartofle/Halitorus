@@ -8,11 +8,11 @@ const styles = {
     }
 }
 
-const stress = (props) => {
+const truama = (props) => {
     const { classes } = props
     return (
         <Checkbox className={classes.stress} />
     );
 }
 
-export default withStyles(styles)(stress);
+export default withStyles(styles)(truama);

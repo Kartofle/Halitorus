@@ -8,9 +8,14 @@ const styles = theme => ({
         display: 'flex',
     },
     textField: {
-        marginLeft: theme.spacing.unit,
-        marginRight: theme.spacing.unit,
+        marginLeft: theme.spacing.unit * .5,
+        marginRight: theme.spacing.unit * .5,
         width: 150,
+    },
+    longTextField: {
+        marginLeft: theme.spacing.unit * .5,
+        marginRight: theme.spacing.unit * .5,
+        width: 200,
     },
     columnBlock: {
         display: 'flex',
@@ -29,13 +34,13 @@ const charOverview = (props) => {
                 <TextField
                     id="chacater-name"
                     placeholder="Name"
-                    className={classes.textField}
+                    className={classes.longTextField}
                     margin="dense"
                 /> 
                 <TextField
                     id="race"
                     placeholder="Race"
-                    className={classes.textField}
+                    className={classes.longTextField}
                     margin="dense"
                 /> 
             </div>

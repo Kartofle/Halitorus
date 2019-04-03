@@ -2,14 +2,14 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 
 import Wound from './Wound/Wound';
-import Stress from './Stress/Stress';
+import Truama from './Truama/Truama';
 
 const styles = theme => ({
     container: {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'flex-start',
-        margin: '10px 0 0 45px',
+        margin: '10px 0 0 5px',
     },
     label: {
         display: 'flex',
@@ -29,9 +29,9 @@ const charWounds = (props) => {
                 <Wound />
             </div>
             <div className={classes.label}>
-                <h4 className={classes.h4}>Stresses</h4>
-                <Stress />
-                <Stress />
+                <h4 className={classes.h4}>Truamas</h4>
+                <Truama />
+                <Truama />
             </div>
         </div>
     );

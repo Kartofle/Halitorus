@@ -7,6 +7,7 @@ import CharStats from './CharStats/CharStats';
 import CharQuickSlots from './CharQuickSlots/CharQuickSlots';
 import CharArmor from './CharArmor/CharArmor';
 import CharWounds from './CharWounds/CharWounds';
+import Cover from './Cover/Cover';
 
 const styles = theme => ({
     paper: {
@@ -15,9 +16,14 @@ const styles = theme => ({
         textAlign: 'center',
         color: theme.palette.text.secondary,
     },
-    QScontainer: {
+    Qcontainer: {
         justifyContent: 'space-evenly',
         display: 'flex',
+    },
+    Wcontainer: {
+        justifyContent: 'space-between',
+        display: 'flex',
+        margin: '0 40px',
     },
 });
 
@@ -28,11 +34,14 @@ const characterSheet = (props) => {
             <strong><h2>Lore Character Sheet</h2></strong>
             <CharOverview />
             <CharStats />
-            <div className={classes.QScontainer}>
+            <div className={classes.Qcontainer}>
                 <CharQuickSlots />
                 <CharArmor />
             </div>
-            <CharWounds />
+            <div className={classes.Wcontainer}>
+                <CharWounds />
+                <Cover />
+            </div>
         </Paper>
     );
 }
