@@ -8,13 +8,15 @@ import CharQuickSlots from './CharQuickSlots/CharQuickSlots';
 import CharArmor from './CharArmor/CharArmor';
 import CharWounds from './CharWounds/CharWounds';
 import Cover from './Cover/Cover';
+import Consiquences from './Consiquences/Consiquences';
 
 const styles = theme => ({
     paper: {
-        height: '-webkit-fill-available',
-        padding: theme.spacing.unit * 2,
+        height: '100%',
+        width: '80%',
         textAlign: 'center',
         color: theme.palette.text.secondary,
+        paddingBottom: '24px',
     },
     Qcontainer: {
         justifyContent: 'space-evenly',
@@ -23,7 +25,7 @@ const styles = theme => ({
     Wcontainer: {
         justifyContent: 'space-between',
         display: 'flex',
-        margin: '0 40px',
+        margin: '10px 40px 0',
     },
 });
 
@@ -42,6 +44,7 @@ const characterSheet = (props) => {
                 <CharWounds />
                 <Cover />
             </div>
+            <Consiquences />
         </Paper>
     );
 }

@@ -9,13 +9,11 @@ import Game from './Game/Game';
 
 const styles = theme => ({
     root: {
-        height: '-webkit-fill-available',
         width: '100%',
         maxWidth: 360,
         backgroundColor: theme.palette.background.paper,
     },
     paper: {
-        height: '100%',
         padding: theme.spacing.unit * 2,
         textAlign: 'center',
         color: theme.palette.text.secondary,

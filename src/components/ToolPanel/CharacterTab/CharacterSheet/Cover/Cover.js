@@ -4,9 +4,6 @@ import TextField from '@material-ui/core/TextField';
 import InputAdornment from '@material-ui/core/InputAdornment';
 
 const styles = theme => ({
-    root: {
-        margin: '10px 0 0 0',
-    },
     cover: {
       margin: theme.spacing.unit * .5,
       width: 80,
@@ -20,7 +17,7 @@ const styles = theme => ({
 const cover = (props) => {
     const { classes } = props
     return (
-        <div className={classes.root}>
+        <div>
             <TextField
                 id="cover"
                 className={classes.cover}

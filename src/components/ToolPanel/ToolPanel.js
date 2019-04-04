@@ -31,7 +31,7 @@ class ToolPanel extends React.Component {
   render() {
     const { classes } = this.props;
     const { value } = this.state;
-
+ 
     return (
       <Paper className={classes.root}>
         <Tabs

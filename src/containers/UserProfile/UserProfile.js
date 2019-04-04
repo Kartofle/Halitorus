@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
 
 import GamePanel from '../../components/GamePanel/GamePanel';
 import ToolPanel from '../../components/ToolPanel/ToolPanel';
 
 const styles = theme => ({
     root: {
+      height: '-webkit-fill-avialable',
       flexGrow: 1,
+      display: 'flex',
     },
-    display: {
-      height: '-webkit-fill-available',
+    tools: {
+      flex: 4,
+      color: theme.palette.text.secondary,
     },
-    paper: {
-      height: '100%',
-      padding: theme.spacing.unit * 2,
-      textAlign: 'center',
+    list: {
+      flex: 1,
       color: theme.palette.text.secondary,
     },
 });
@@ -25,14 +25,8 @@ class UserProfile extends Component {
         const { classes } = this.props;
         return (
             <div className={classes.root}>
-              <Grid container alignItems="stretch" spacing={0} className={classes.display}>
-                <Grid item xs={2}>
-                  <GamePanel />
-                </Grid>
-                <Grid item xs={10}>
-                  <ToolPanel />
-                </Grid>
-              </Grid>
+              <GamePanel className={classes.list}/>
+              <ToolPanel className={classes.tools}/>
             </div>
         );
     }

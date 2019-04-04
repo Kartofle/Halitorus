@@ -17,14 +17,11 @@ import Button from '@material-ui/core/Button';
 
 const styles = theme => ({
     root: {
-        height: '-webkit-fill-available',
-        width: '100%',
-        minWidth: '225px',
+        width: '99%',
         backgroundColor: theme.palette.background.paper,
     },
     paper: {
-        height: '100%',
-        padding: theme.spacing.unit * 2,
+        width: '20%',
         textAlign: 'center',
         color: theme.palette.text.secondary,
     },
@@ -54,7 +51,7 @@ class CharacterList extends React.Component {
     const { classes } = this.props;
 
     return (
-        <Paper>
+        <Paper className={classes.paper}>
             <List
                 component="nav"
                 className={classes.root}
