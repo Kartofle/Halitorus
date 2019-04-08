@@ -33,12 +33,12 @@ const gamePanel = (props) => {
             <div className={classes.title}>Current Campaigns</div>
             <Divider />
             <List className={classes.root}>
-                <Game />
-                <Game />
-                <Game />
                 <Button variant="outlined" size="small" color="primary" className={classes.margin}>
                     New Game
                 </Button>
+                <Game />
+                <Game />
+                <Game />
             </List>
         </Paper>
     );

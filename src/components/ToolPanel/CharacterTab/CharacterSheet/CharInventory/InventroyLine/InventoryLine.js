@@ -1,7 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 
-import ConBlock from './ConBlock/ConBlock';
+import InventorySlot from './InventorySlot/InventorySlot';
 
 const styles = theme => ({
     container: {
@@ -11,15 +11,15 @@ const styles = theme => ({
     },
 });
 
-const consiquences = (props) => {
+const inventoryLine = (props) => {
     const { classes } = props
     return (
         <div className={classes.container}>
-            <ConBlock />
-            <ConBlock />
-            <ConBlock />
+            <InventorySlot />
+            <InventorySlot />
+            <InventorySlot />
         </div>
     );
 }
 
-export default withStyles(styles)(consiquences);
+export default withStyles(styles)(inventoryLine);

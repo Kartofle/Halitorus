@@ -16,10 +16,10 @@ const styles = theme => ({
         marginRight: theme.spacing.unit * .5,
         width: 40,
     },
-    thickTextField: {
+    longTextField: {
         marginLeft: theme.spacing.unit * .5,
         marginRight: theme.spacing.unit * .5,
-        width: 250,
+        width: 280,
     },
     rowBlock: {
         display: 'flex',
@@ -52,7 +52,7 @@ const quickSlot = (props) => {
                 <TextField
                     id="damage"
                     placeholder="Damage"
-                    className={classes.thickTextField}
+                    className={classes.longTextField}
                     margin="dense"
                 /> 
             </div>

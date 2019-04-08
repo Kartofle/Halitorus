@@ -6,11 +6,11 @@ import InputAdornment from '@material-ui/core/InputAdornment';
 const styles = theme => ({
     cover: {
       margin: theme.spacing.unit * .5,
-      width: 80,
+      width: 100,
     },
     barrier: {
         margin: theme.spacing.unit * .5,
-        width: 200,
+        width: 210,
       },
   });
 
@@ -33,7 +33,7 @@ const cover = (props) => {
                 className={classes.barrier}
                 variant="outlined"
                 label="Barrier"
-                placeholder="HR                 /"
+                placeholder="HR                   /"
                 InputLabelProps={{
                     shrink: true,
                 }}

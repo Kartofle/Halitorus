@@ -7,39 +7,35 @@ const styles = theme => ({
         marginTop: '1px',
         marginLeft: theme.spacing.unit * .5,
         marginRight: theme.spacing.unit * .5,
-        width: 275,
+        width: 240,
     },
-    columnBlock: {
+    smTextField: {
+        marginTop: '1px',
+        marginLeft: theme.spacing.unit * .5,
+        marginRight: theme.spacing.unit * .5,
+        width: 25,
+    },
+    rowBlock: {
         display: 'flex',
-        flexDirection: 'column',
     },
-    label: {
-        margin: '1px 0'
-    }
 });
 
-const conBlock = (props) => {
+const inventorySlot = (props) => {
     const { classes } = props
     return (
-        <div className={classes.columnBlock}>
-            <h5 className={classes.label}>Test</h5>
+        <div className={classes.rowBlock}>
             <TextField
-                id="body-con-1"
+                id="item-name"
                 className={classes.textField}
                 margin="dense"
             /> 
             <TextField
-                id="body-con-2"
-                className={classes.textField}
-                margin="dense"
-            /> 
-            <TextField
-                id="body-con-3"
-                className={classes.textField}
+                id="item-weight"
+                className={classes.smTextField}
                 margin="dense"
             /> 
         </div>
     );
 }
 
-export default withStyles(styles)(conBlock);
+export default withStyles(styles)(inventorySlot);

@@ -56,6 +56,9 @@ class CharacterList extends React.Component {
                 component="nav"
                 className={classes.root}
             >
+                <Button variant="outlined" size="small" color="primary" className={classes.margin}>
+                    New Character
+                </Button>
                 <ListItem button onClick={this.handlePCsClick}>
                 <ListItemIcon>
                     <PersonIcon />
@@ -66,9 +69,6 @@ class CharacterList extends React.Component {
 
                 <Collapse in={this.state.openPCs} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
-                    <Button variant="outlined" size="small" color="primary" className={classes.margin}>
-                        New PC
-                    </Button>
                     <ListItem button className={classes.nested}>
                     <ListItemIcon>
                         <Avatar alt="PC" src=""/>
@@ -88,9 +88,6 @@ class CharacterList extends React.Component {
 
                 <Collapse in={this.state.openNPCs} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
-                    <Button variant="outlined" size="small" color="primary" className={classes.margin}>
-                        New NPC
-                    </Button>
                     <ListItem button className={classes.nested}>
                     <ListItemIcon>
                         <StarBorder />

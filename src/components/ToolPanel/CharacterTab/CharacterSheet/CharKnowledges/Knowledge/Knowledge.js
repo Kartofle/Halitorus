@@ -7,39 +7,36 @@ const styles = theme => ({
         marginTop: '1px',
         marginLeft: theme.spacing.unit * .5,
         marginRight: theme.spacing.unit * .5,
-        width: 275,
+        width: 280,
     },
-    columnBlock: {
+    smallTextField: {
+        marginTop: '1px',
+        marginLeft: theme.spacing.unit * .5,
+        marginRight: theme.spacing.unit * .5,
+        width: 50,
+    },
+    rowBlock: {
         display: 'flex',
-        flexDirection: 'column',
     },
-    label: {
-        margin: '1px 0'
-    }
 });
 
-const conBlock = (props) => {
+const knowledge = (props) => {
     const { classes } = props
     return (
-        <div className={classes.columnBlock}>
-            <h5 className={classes.label}>Test</h5>
+        <div className={classes.rowBlock}>
             <TextField
-                id="body-con-1"
+                id="knowledge"
                 className={classes.textField}
                 margin="dense"
             /> 
             <TextField
-                id="body-con-2"
-                className={classes.textField}
+                id="knowledge-lvl"
+                className={classes.smallTextField}
                 margin="dense"
-            /> 
-            <TextField
-                id="body-con-3"
-                className={classes.textField}
-                margin="dense"
-            /> 
+                placeholder="lvl"
+            />
         </div>
     );
 }
 
-export default withStyles(styles)(conBlock);
+export default withStyles(styles)(knowledge);
