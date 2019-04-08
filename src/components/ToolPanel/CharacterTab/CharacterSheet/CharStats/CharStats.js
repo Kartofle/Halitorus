@@ -7,7 +7,6 @@ const styles = theme => ({
         marginLeft: theme.spacing.unit,
         marginRight: theme.spacing.unit,
         width: 90,
-        // flex: 1,
     },
     rowBlock: {
         margin: '0 30px',

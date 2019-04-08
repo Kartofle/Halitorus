@@ -1,7 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 
+import PlayerBlock from './PlayerBlock/PlayerBlock';
 import CharOverview from './CharOverview/CharOverview';
 import CharStats from './CharStats/CharStats';
 import CharQuickSlots from './CharQuickSlots/CharQuickSlots';
@@ -15,7 +15,7 @@ import CharWealth from './CharWealth/CharWealth';
 import CharInventory from './CharInventory/CharInventory';
 
 const styles = theme => ({
-    paper: {
+    form: {
         height: '100%',
         width: '80%',
         textAlign: 'center',
@@ -44,9 +44,10 @@ const styles = theme => ({
 const characterSheet = (props) => {
     const { classes } = props;
     return (
-        <Paper className={classes.paper}>
+        <form className={classes.form}>
             <div className={classes.charSheet}>
                 <strong><h2>Lore Character Sheet</h2></strong>
+                <PlayerBlock />
                 <CharOverview />
                 <CharStats />
                 <div className={classes.Qcontainer}>
@@ -65,7 +66,7 @@ const characterSheet = (props) => {
                 <CharWealth />
                 <CharInventory />
             </div>
-        </Paper>
+        </form>
     );
 }
 

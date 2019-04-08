@@ -29,7 +29,7 @@ const styles = theme => ({
 const charOverview = (props) => {
     const { classes } = props;
     return (
-        <form className={classes.container} noValidate autoComplete="off">
+        <div className={classes.container}>
             <div className={classes.columnBlock}>
                 <TextField
                     id="chacater-name"
@@ -96,7 +96,7 @@ const charOverview = (props) => {
                 margin="dense"
                 variant="outlined"
             />
-        </form> 
+        </div> 
     );
 }
 
