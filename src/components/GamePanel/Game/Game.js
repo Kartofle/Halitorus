@@ -1,27 +1,18 @@
-import React, {Component, Fragment} from 'react';
+import React, { Fragment } from 'react';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 
-class Game extends Component {
-    state = {
-        game: {
-            title: "Campaign Title",
-            host: "Test",
-            players: [],
-        }
-    }
+const game = (props) => {
 
-    render() {
-        return (
-            <Fragment>
-                <ListItem divider={true} button={true}>
-                        <ListItemText 
-                            primary={this.state.game.title} 
-                            secondary={"GM:" + this.state.game.host} />
-                </ListItem>
-            </Fragment>
-        );
-    }
+    return (
+        <Fragment>
+            <ListItem divider={true} button={true}>    
+                    <ListItemText 
+                        primary={props.props.title} 
+                        secondary={"GM:" + props.games.gm} />
+            </ListItem>
+        </Fragment>
+    );
 } 
 
-export default Game; 
+export default game; 

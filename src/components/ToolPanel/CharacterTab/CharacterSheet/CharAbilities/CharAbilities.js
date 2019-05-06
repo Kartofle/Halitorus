@@ -15,19 +15,15 @@ const styles = theme => ({
 
 const charAbilities = (props) => {
     const { classes } = props
+    const abilities = [];
+    const skills = 10;
+    for (var charSkills = 0; charSkills < skills; charSkills++){
+        abilities.push(<Ability key={charSkills}/>)
+    };
     return (
         <div className={classes.columnBlock}>
             <h5 className={classes.label}>Abilities</h5>
-            <Ability />
-            <Ability />
-            <Ability />
-            <Ability />
-            <Ability />
-            <Ability />
-            <Ability />
-            <Ability />
-            <Ability />
-            <Ability />
+            {abilities}
         </div>
     );
 }

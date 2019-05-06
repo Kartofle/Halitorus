@@ -35,7 +35,7 @@ const styles = theme => ({
         marginTop: '12px',
     },
     ABIcontainer: {
-        justifyContent: 'space-evenly',
+        justifyContent: 'center',
         display: 'flex',
         marginTop: '12px',
     },

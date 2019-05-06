@@ -21,19 +21,15 @@ const styles = theme => ({
 
 const charKnowledges = (props) => {
     const { classes } = props
+    const knowledges = [];
+    const studies = 10;
+    for (var knowledgeBodies = 0; knowledgeBodies < studies; knowledgeBodies++){
+        knowledges.push(<Knowledge key={knowledgeBodies}/>)
+    }
     return (
         <div className={classes.columnBlock}>
             <h5 className={classes.label}>Knowledges</h5>
-            <Knowledge />
-            <Knowledge />
-            <Knowledge />
-            <Knowledge />
-            <Knowledge />
-            <Knowledge />
-            <Knowledge />
-            <Knowledge />
-            <Knowledge />
-            <Knowledge />
+            {knowledges}
         </div>
     );
 }

@@ -4,6 +4,8 @@ import List from '@material-ui/core/List';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
 
 import Game from './Game/Game';
 
@@ -28,17 +30,23 @@ const styles = theme => ({
 
 const gamePanel = (props) => {
     const { classes } = props;
+
+    const games = props.games
+
     return (
         <Paper className={classes.paper}>
             <div className={classes.title}>Current Campaigns</div>
             <Divider />
             <List className={classes.root}>
-                <Button variant="outlined" size="small" color="primary" className={classes.margin}>
+                <Button 
+                    variant="outlined" 
+                    size="small" 
+                    color="primary"
+                    onClick={props.newGame} 
+                    className={classes.margin}>
                     New Game
                 </Button>
-                <Game />
-                <Game />
-                <Game />
+                {games}
             </List>
         </Paper>
     );

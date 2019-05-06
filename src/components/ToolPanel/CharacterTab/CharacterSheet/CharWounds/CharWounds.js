@@ -2,7 +2,7 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 
 import Wound from './Wound/Wound';
-import Truama from './Truama/Truama';
+import Trauma from './Trauma/Trauma';
 
 const styles = theme => ({
     container: {
@@ -24,43 +24,29 @@ const styles = theme => ({
 
 const charWounds = (props) => {
     const { classes } = props
+
+    const totalWounds = [];
+    var wounds = 2; 
+
+    const totalTraumas = [];
+    var traumas = 2;
+
+    for (var hearts = 0; hearts < wounds; hearts++) {
+        totalWounds.push(<Wound key={hearts}/>)   
+    };
+
+    for (var headaches = 0; headaches < traumas; headaches++) {
+        totalTraumas.push(<Trauma key={headaches}/>)   
+    };
     return (
         <div className={classes.container}>
             <div className={classes.label}>
                 <h4 className={classes.h4W}>Wounds</h4>
-                <Wound />
-                <Wound />
-                <Wound />
-                <Wound />
-                <Wound />
-                <Wound />
-                <Wound />
-                <Wound />
-                <Wound />
-                <Wound />
-                <Wound />
-                <Wound />
-                <Wound />
-                <Wound />
-                <Wound />
+                {totalWounds}
             </div>
             <div className={classes.label}>
-                <h4 className={classes.h4T}>Truamas</h4>
-                <Truama />
-                <Truama />
-                <Truama />
-                <Truama />
-                <Truama />
-                <Truama />
-                <Truama />
-                <Truama />
-                <Truama />
-                <Truama />
-                <Truama />
-                <Truama />
-                <Truama />
-                <Truama />
-                <Truama />
+                <h4 className={classes.h4T}>Traumas</h4>
+                {totalTraumas}
             </div>
         </div>
     );

@@ -5,7 +5,7 @@ import TextField from '@material-ui/core/TextField';
 const styles = theme => ({
     textField: {
         marginTop: '1px',
-        marginLeft: theme.spacing.unit * .5,
+        marginLeft: theme.spacing.unit,
         marginRight: theme.spacing.unit * .5,
         width: 280,
     },

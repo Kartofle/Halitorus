@@ -11,15 +11,18 @@ const styles = theme => ({
     },
 });
 
-const consiquences = (props) => {
+const consequences = (props) => {
     const { classes } = props
+    const consequences = ["Physical", "Mental", "Story"];
+
     return (
         <div className={classes.container}>
-            <ConBlock />
-            <ConBlock />
-            <ConBlock />
+        {
+            consequences.map((title, index) => 
+            <ConBlock key={index} title={title}/>)
+        }
         </div>
     );
 }
 
-export default withStyles(styles)(consiquences);
+export default withStyles(styles)(consequences);

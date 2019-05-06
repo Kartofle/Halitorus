@@ -1,8 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import axios from '../../axios-games';
 
 import GamePanel from '../../components/GamePanel/GamePanel';
 import ToolPanel from '../../components/ToolPanel/ToolPanel';
+import Spinner from '../../components//UI/Spinner/Spinner';
 
 const styles = theme => ({
     root: {
@@ -21,15 +23,46 @@ const styles = theme => ({
 });
 
 class UserProfile extends Component {
-    render () {  
-        const { classes } = this.props;
-        return (
-            <div className={classes.root}>
-              <GamePanel className={classes.list}/>
-              <ToolPanel className={classes.tools}/>
-            </div>
-        );
+  state = {
+    games: [],
+    auth: true,
+    error: false,
+  }
+
+  componentDidMount () {
+    axios.get('https://halitorus.firebaseio.com/games.json')
+      .then(response => {
+          this.setState( { games: response.data } );
+      })
+      .catch(error => {
+          console.log(error);
+      });
+  }
+
+  render () {
+    const { classes } = this.props;
+
+    let view = this.state.error ? <p>Games could not be loaded.</p> : <Spinner />
+
+
+    if (this.state.games) {
+      view = (
+        <Fragment>
+          <GamePanel 
+            className={classes.list}
+            newGame={this.newGameHandler}/>
+          <ToolPanel 
+            className={classes.tools} />
+        </Fragment>
+      );
     }
+
+    return (
+      <div className={classes.root}>
+        {view}
+      </div>
+    );
+  }
 }
 
 export default withStyles(styles)(UserProfile);

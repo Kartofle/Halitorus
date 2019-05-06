@@ -7,14 +7,14 @@ const styles = theme => ({
         marginTop: '1px',
         marginLeft: theme.spacing.unit * .5,
         marginRight: theme.spacing.unit * .5,
-        width: 275,
+        width: 280,
     },
     dice: {
         borderBottom: 'thin solid grey',
         marginBottom: '4px',
         marginLeft: theme.spacing.unit * .5,
-        marginRight: theme.spacing.unit * .5,
-        width: 180,
+        marginRight: theme.spacing.unit,
+        width: 200,
     },
     rowBlock: {
         display: 'flex',

@@ -16,7 +16,7 @@ const styles = theme => ({
     longTextField: {
         marginLeft: theme.spacing.unit * .5,
         marginRight: theme.spacing.unit * .5,
-        width: 280,
+        width: 270,
     },
     rowBlock: {
         display: 'flex',

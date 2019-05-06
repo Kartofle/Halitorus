@@ -24,19 +24,15 @@ const styles = theme => ({
 
 const charInventory = (props) => {
     const { classes } = props
+    const backpack = [];
+    const backpackRows = 10;
+    for (var inventory = 0; inventory < backpackRows; inventory++){
+        backpack.push(<InventoryLine key={`${backpack.length}_${inventory}`}/>)
+    };
     return (
         <div className={classes.container}>
             <h5 className={classes.label}>Inevntory</h5>
-            <InventoryLine />
-            <InventoryLine />
-            <InventoryLine />
-            <InventoryLine />
-            <InventoryLine />
-            <InventoryLine />
-            <InventoryLine />
-            <InventoryLine />
-            <InventoryLine />
-            <InventoryLine />
+            {backpack}
             <div className={classes.rowBlock}> 
                 <SoulBlock />
                 <Encumberance />

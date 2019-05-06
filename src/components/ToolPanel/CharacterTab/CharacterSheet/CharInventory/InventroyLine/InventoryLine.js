@@ -13,11 +13,14 @@ const styles = theme => ({
 
 const inventoryLine = (props) => {
     const { classes } = props
+    const invLine = [];
+    const invRows = 3;
+    for (var iRows = 0; iRows < invRows; iRows++){
+        invLine.push(<InventorySlot key={iRows}/>)
+    }
     return (
         <div className={classes.container}>
-            <InventorySlot />
-            <InventorySlot />
-            <InventorySlot />
+            {invLine}
         </div>
     );
 }

@@ -20,24 +20,21 @@ const styles = theme => ({
 
 const conBlock = (props) => {
     const { classes } = props
+    const conInputs = 3;
+    const textFields = [];
+    for (var textBoxes = 0; textBoxes < conInputs; textBoxes++){
+        textFields.push(
+            <TextField
+                id={`${props.title}_${textFields.length}`}
+                className={classes.textField}
+                margin="dense"
+            /> )
+    };
+
     return (
         <div className={classes.columnBlock}>
-            <h5 className={classes.label}>Test</h5>
-            <TextField
-                id="body-con-1"
-                className={classes.textField}
-                margin="dense"
-            /> 
-            <TextField
-                id="body-con-2"
-                className={classes.textField}
-                margin="dense"
-            /> 
-            <TextField
-                id="body-con-3"
-                className={classes.textField}
-                margin="dense"
-            /> 
+            <h5 className={classes.label}>{props.title}</h5>
+            {textFields}
         </div>
     );
 }

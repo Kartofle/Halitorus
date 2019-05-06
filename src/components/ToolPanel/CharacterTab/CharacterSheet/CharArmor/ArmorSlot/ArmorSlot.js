@@ -13,11 +13,6 @@ const styles = theme => ({
         marginRight: theme.spacing.unit  * .5,
         width: 165,
     },
-    medTextField: {
-        marginLeft: theme.spacing.unit * .5,
-        marginRight: theme.spacing.unit * .5,
-        width: 80,
-    },
     thinTextField: {
         marginLeft: theme.spacing.unit * .5,
         marginRight: theme.spacing.unit * .5,
@@ -50,9 +45,16 @@ const armorSlot = (props) => {
                 margin="dense"
             /> 
             <TextField
-                id="durability"
-                placeholder="         /"
-                className={classes.medTextField}
+                id="durability-current"
+                placeholder=" "
+                className={classes.thinTextField}
+                margin="dense"
+            />
+            /
+            <TextField
+                id="durability-max"
+                placeholder=" "
+                className={classes.thinTextField}
                 margin="dense"
             />
         </div>
